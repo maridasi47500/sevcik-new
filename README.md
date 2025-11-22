@@ -1,1 +1,2 @@
 # sevcik-new
+- partitions 
