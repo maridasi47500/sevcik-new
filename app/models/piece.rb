@@ -1,3 +1,3 @@
 class Piece < ApplicationRecord
-hs_many :passages
+has_many :passages
 end
