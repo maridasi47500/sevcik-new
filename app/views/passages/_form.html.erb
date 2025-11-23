@@ -11,20 +11,13 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
 
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
-    <%= form.label :piece_id, style: "display: block" %>
-    <%= form.number_field :piece_id %>
-  </div>
+    <%= form.hidden_field :piece_id %>
 
   <div>
     <%= form.label :endbar, style: "display: block" %>
@@ -37,8 +30,8 @@
   </div>
 
   <div>
-    <%= form.label :myscore, style: "display: block" %>
-    <%= form.text_field :myscore %>
+    <%= form.label :myscore, "photo de la partition de sevcik", style: "display: block" %>
+    <%= form.file_field :myscore %>
   </div>
 
   <div>

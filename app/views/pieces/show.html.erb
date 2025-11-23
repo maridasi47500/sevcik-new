@@ -1,6 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
+<p><%= @piece.name %></p>
+<h1> Add New passage to the piece</h1>
+
+
+<%= render "passages/form", passage: @piece.passages.new %>
+
+<br>
 <%= render @piece %>
+
+
 
 <div>
   <%= link_to "Edit this piece", edit_piece_path(@piece) %> |

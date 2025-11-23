@@ -10,3 +10,4 @@
 score=Piece.create(name: "le streghe")
 passage=score.passages.create(title: "passage", beginbar: "1", endbar: "16", description:" 1st variation with 16 bowing styles")
 passage=score.passages.create(title: "passage", beginbar: "17", endbar: "18", description:" by pressing the middle string with the bow harder on the middle string near the bridge the strings sound simultaneously")
+passage=score.passages.create(title: "II variation", beginbar: "", endbar: "", description:" at the pizzicato pass the finger")
