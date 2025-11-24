@@ -4,7 +4,7 @@
 ![alt text](sevcik1.png)
 ![alt text](sevcik2.png)
 ![alt text](sevcik3.png)
-bash```
+bash````
 mkdir -p ~/path/to/venv
 python3 -m venv ~/path/to/venv
 source ~/path/to/venv/bin/activate
