@@ -3,7 +3,8 @@ has_many :passages
 after_create :hellothere
 after_update :hellothere
 def hellothere
-@score="
+@myscore="
+
 \\version \"2.24.3\"
 
 \\header {
@@ -11,7 +12,7 @@ def hellothere
 }
 
 global = {
-  \\key #{self.key_signature.sub(" "," \\")}
+  \\key #{key_signature.sub(" "," \\")}
   \\numericTimeSignature
   \\time #{time_signature}
 }
@@ -23,7 +24,7 @@ violin = \\relative c'' {
 }
 
 \\score {
-  \\new Staff \\with {
+  \\new Staff \with {
     instrumentName = \"Violon\"
     midiInstrument = \"violin\"
   } \\violin
@@ -33,14 +34,27 @@ violin = \\relative c'' {
   }
 }
 
+
 "
+@score="
+
+<lilypond fragment staffsize=26>
+  \\key #{key_signature.sub(" "," \\")}
+  \\numericTimeSignature
+  \\time #{time_signature}
+  c'4 d' e' f' g'2 g'
+</lilypond>
+"
+
 p @score
 
 wow="./public/uploads/"
-hi=self.name.parameterize+".ly"
+hi=self.name.parameterize
 p wow+hi
-File.write(wow+hi, @score)
-@hey=`(cd #{wow} && lilypond #{hi})`
+File.write(wow+"hello"+hi+".ly", @myscore)
+File.write(wow+"hey"+hi+".html", @score)
+@hey=`(cd #{wow} && lilypond-book hey#{hi}.html -f html --output #{hi})`
+@hi=`(cd #{wow} && ly highlight hello#{hi}.ly > hello#{hi}.html)`
 
 end
 

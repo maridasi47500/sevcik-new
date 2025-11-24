@@ -4,7 +4,9 @@
 <h1> Add New passage to the piece</h1>
 
 
-<iframe style="width:90%;height:200px;" src="/uploads/<%=@piece.name.parameterize%>.pdf">
+<iframe style="width:90%;height:200px;" src="/uploads/<%=@piece.name.parameterize%>/hey<%=@piece.name.parameterize%>.html">
+</iframe>
+<iframe style="width:90%;height:200px;" src="/uploads/hello<%=@piece.name.parameterize%>.html">
 </iframe>
 <%= render "passages/form", passage: Passage.new(piece_id: @piece.id) %>
 
