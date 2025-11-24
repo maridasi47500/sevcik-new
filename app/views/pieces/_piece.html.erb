@@ -3,27 +3,33 @@
     <%= piece.name %>
   </p>
 <ul>
+<h6>passages</h6>
 <%piece.passages.each do |passage|%>
 <li>
+  <p>
+    <strong><%= passage.title %></strong>
+    
+  </p>
  <p>
     <strong>Description:</strong>
     <%= passage.description %>
   </p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= passage.title %>
-  </p>
 
 
+
+<%if passage.beginbar.length > 0%>
   <p>
     <strong>beginbar:</strong>
     <%= passage.beginbar %>
   </p>
+<%end%>
+<%if passage.endbar.length > 0%>
   <p>
     <strong>Endbar:</strong>
     <%= passage.endbar %>
   </p>
+<%end%>
 </li>
 
 

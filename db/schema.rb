@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_23_161311) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_24_003506) do
   create_table "passages", force: :cascade do |t|
     t.string "description"
     t.string "title"
@@ -26,5 +26,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_23_161311) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "key_signature"
+    t.string "time_signature"
   end
 end

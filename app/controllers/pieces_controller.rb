@@ -12,7 +12,7 @@ class PiecesController < ApplicationController
 
   # GET /pieces/new
   def new
-    @piece = Piece.new
+    @piece = Piece.new(key_signature: "c major")
   end
 
   # GET /pieces/1/edit
@@ -65,6 +65,6 @@ class PiecesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def piece_params
-      params.expect(piece: [ :name ])
+      params.expect(piece: [ :name, :key_signature, :time_signature ])
     end
 end

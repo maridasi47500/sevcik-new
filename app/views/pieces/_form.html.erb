@@ -15,6 +15,27 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
+  <div>
+    <%= form.label :time_signature, "comme 4/4, 4/8, 6/8, 3/8 etc.", style: "display: block" %>
+    <%= form.text_field :time_signature %>
+  </div>
+  <div>
+    <%= form.label :key_signature, style: "display: block" %>
+<%keys=piece.key_signature.split(" ")%>
+<select value="<%=keys[0]%>" id="key1" onchange="piece_key_signature.value=key1.value+' '+key2.value">
+<%["a","b","c","cis","des","d", "dis","ees","e","f"].each do |h|%>
+<option <%=keys[0] == h ? "selected=\"selected\"" : ""%> value="<%=h%>"><%=h%>
+</option>
+<%end%>
+</select>
+<select value="<%=keys[1]%>" id="key2" onchange="piece_key_signature.value=key1.value+' '+key2.value">
+<%["major","minor"].each do |h|%>
+<option <%=keys[1] == h ? "selected=\"selected\"" : ""%> value="<%=h%>"><%=h%>
+</option>
+<%end%>
+</select>
+    <%= form.hidden_field :key_signature %>
+  </div>
 
   <div>
     <%= form.submit %>

@@ -1,24 +1,19 @@
 <div id="<%= dom_id passage %>">
   <p>
+    <strong>
+
+    <%= passage.title %>
+de
+    <%= passage.piece.name %>
+</strong>
+  </p>
+  <p>
     <%= link_to "back to the score", passage.piece %>
     <strong>Description:</strong>
     <%= passage.description %>
   </p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= passage.title %>
-  </p>
 
-  <p>
-    <strong>Piece:</strong>
-    <%= passage.piece_id %>
-  </p>
-
-  <p>
-    <strong>Endbar:</strong>
-    <%= passage.endbar %>
-  </p>
 
   <p>
     <strong>Beginbar:</strong>
@@ -26,8 +21,16 @@
   </p>
 
   <p>
-    <strong>Myscore:</strong>
-    <%= passage.myscore %>
+    <strong>Endbar:</strong>
+    <%= passage.endbar %>
+  </p>
+
+
+
+  <p>
+    <strong>Photo of Myscore:</strong>
+<br>
+    <img src="/uploads/<%= passage.myscore %>" />
   </p>
 
 </div>
