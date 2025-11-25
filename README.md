@@ -4,6 +4,10 @@
 ![alt text](sevcik1.png)
 ![alt text](sevcik2.png)
 ![alt text](sevcik3.png)
+![alt text](sevcik4.png)
+![alt text](sevcik5.png)
+![alt text](sevcik6.png)
+![alt text](sevcik7.png)
 ````
 mkdir -p ~/path/to/venv
 python3 -m venv ~/path/to/venv

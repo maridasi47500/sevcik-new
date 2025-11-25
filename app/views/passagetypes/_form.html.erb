@@ -1,0 +1,27 @@
+<%= form_with(model: passagetype) do |form| %>
+  <% if passagetype.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(passagetype.errors.count, "error") %> prohibited this passagetype from being saved:</h2>
+
+      <ul>
+        <% passagetype.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, "comme les intervalles", style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content, "comme \\repeat tremolo 2 { c8 g }", style: "display: block" %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

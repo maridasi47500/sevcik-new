@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @passagetype %>
+<iframe style="width:90%;height:200px;" src="/uploads/<%=@passagetype.title.parameterize%>/mytype<%=@passagetype.title.parameterize%>.html">
+</iframe>
+
+
+<div>
+  <%= link_to "Edit this passagetype", edit_passagetype_path(@passagetype) %> |
+  <%= link_to "Back to passagetypes", passagetypes_path %>
+
+  <%= button_to "Destroy this passagetype", @passagetype, method: :delete %>
+</div>

@@ -3,6 +3,7 @@
 <%= render @passage %>
 
 <div>
+  <%= link_to "this passage has different signature", othersignature_passage_path(@passage) %> |
   <%= link_to "Edit this passage", edit_passage_path(@passage) %> |
   <%= link_to "Back to passages", passages_path %>
 

@@ -28,11 +28,26 @@
     <%= form.label :beginbar, style: "display: block" %>
     <%= form.text_field :beginbar %>
   </div>
+  <div>
+    <%= form.label :passagetype_id, style: "display: block" %>
+    <%= form.select :passagetype_id, [""]+Passagetype.all.collect{|g|[g.title, g.id]} %>
+  </div>
 
   <div>
     <%= form.label :myscore, "photo de la partition de sevcik", style: "display: block" %>
     <%= form.file_field :myscore %>
   </div>
+  <%= form.fields_for :different_signature do |fact| %>
+<div>
+    <%= fact.label :mytime, "4/4, 4/8" %>
+    <%= fact.text_field :mytime %>
+</div>
+<div>
+    <%= fact.label :mykey, "cis minor, a major, g minor, e minor, etc." %>
+    <%= fact.text_field :mykey %>
+</div>
+  <% end %>
+
 
   <div>
     <%= form.submit %>

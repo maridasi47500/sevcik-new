@@ -23,6 +23,11 @@
   </head>
 
   <body>
+<nav>
+<%=link_to "pieces", pieces_path%> |
+<%=link_to "passages", passages_path%> |
+<%=link_to "passage types", passagetypes_path %>
+</nav>
     <%= yield %>
   </body>
 </html>

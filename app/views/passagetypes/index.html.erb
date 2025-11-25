@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Passagetypes" %>
+
+<h1>Passagetypes</h1>
+
+<div id="passagetypes">
+  <% @passagetypes.each do |passagetype| %>
+    <%= render passagetype %>
+    <p>
+      <%= link_to "Show this passagetype", passagetype %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New passagetype", new_passagetype_path %>

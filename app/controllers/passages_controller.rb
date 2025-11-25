@@ -1,5 +1,5 @@
 class PassagesController < ApplicationController
-  before_action :set_passage, only: %i[ show edit update destroy ]
+  before_action :set_passage, only: %i[ show edit update destroy othersignature]
 
   # GET /passages or /passages.json
   def index
@@ -17,6 +17,10 @@ class PassagesController < ApplicationController
 
   # GET /passages/1/edit
   def edit
+  end
+  def othersignature
+    @passage.build_different_signature
+    render :edit
   end
 
   # POST /passages or /passages.json
@@ -65,6 +69,6 @@ class PassagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def passage_params
-      params.expect(passage: [ :description, :title, :piece_id, :endbar, :beginbar, :myscore ])
+      params.expect(passage: [ :description, :title, :piece_id, :endbar, :beginbar, :myscore, :passagetype_id, :different_signature_attributes => {} ])
     end
 end

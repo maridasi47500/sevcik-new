@@ -3,6 +3,9 @@ require 'rtesseract'
 
 
 class Passage < ApplicationRecord
+belongs_to :passagetype, optional: true
+has_one :different_signature, class_name: "Signature"
+accepts_nested_attributes_for :different_signature
 belongs_to :piece
 def myscore=(uploaded_io)
 File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|

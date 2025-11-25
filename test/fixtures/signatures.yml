@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  passage_id: 1
+  mykey: MyString
+  mytime: MyString
+
+two:
+  name: MyString
+  passage_id: 1
+  mykey: MyString
+  mytime: MyString

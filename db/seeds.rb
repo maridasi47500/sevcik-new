@@ -7,6 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+f=Passagetype.create(title: "interval", content: "\\repeat tremolo 2 { c8 g }")
 score=Piece.create(name: "le streghe")
 passage=score.passages.create(title: "passage", beginbar: "1", endbar: "16", description:" 1st variation with 16 bowing styles")
 passage=score.passages.create(title: "passage", beginbar: "17", endbar: "18", description:" by pressing the middle string with the bow harder on the middle string near the bridge the strings sound simultaneously")
