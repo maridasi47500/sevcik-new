@@ -35,6 +35,10 @@ global = {
   }
 
   #{self.passages.map.with_index {|y,i|"
+#{(y.beginbar.to_i > 0 and y.endbar.to_i > 0) ? "
+\\markup \\box { \"#{y.beginbar} - #{y.endbar}\" }
+
+" : ""}
 
 \\markup \\wordwrap-string { \"#{y.description.tr("\n"," ").gsub(/[^A-Za-z ]/i, '').strip}\"}
 \\score {
