@@ -22,6 +22,9 @@ rescue => e
 end
 write_attribute(:description, text)
 write_attribute(:myscore, uploaded_io.original_filename)
+rescue => e
+p "aucune image"
+p e.message
 end
 def myscore
 read_attribute(:myscore)

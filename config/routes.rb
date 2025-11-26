@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :passages do
   member do
     get "othersignature"
+    get "editdescription"
   end
   end
   resources :pieces

@@ -1,5 +1,5 @@
 class PassagesController < ApplicationController
-  before_action :set_passage, only: %i[ show edit update destroy othersignature]
+  before_action :set_passage, only: %i[ show edit update destroy othersignature editdescription]
 
   # GET /passages or /passages.json
   def index
@@ -17,6 +17,9 @@ class PassagesController < ApplicationController
 
   # GET /passages/1/edit
   def edit
+  end
+  def editdescription
+    render :editdescription
   end
   def othersignature
     @passage.build_different_signature
